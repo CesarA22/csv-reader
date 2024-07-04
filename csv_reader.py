@@ -1,4 +1,6 @@
-def csv_para_texto(arquivo_csv):
+def csv_para_texto():
+    arquivo_csv = input("Por favor, digite o nome do arquivo CSV: ")
+
     componentes = []
     problemas = []
     solucoes = []
@@ -27,8 +29,6 @@ def csv_para_texto(arquivo_csv):
                 for problema in problemas:
                     for solucao in solucoes:
                         for dado_sensorial in dados_sensoriais:
-                            saida.write(f"O componente: {componente} é parte da Máquina: {maquina}, 
-                                        seus possiveis problemas são: {problema}, que geralmente e causado por: {dado_sensorial}, 
-                                        e pode ser solucionado com: {solucao}\n")
-                            
-csv_para_texto('grafo.csv')
+                            saida.write(f"O componente: {componente} é parte da Máquina: {maquina}, seus possiveis problemas são: {problema}, que geralmente e causado por: {dado_sensorial}, e pode ser solucionado com: {solucao}\n")
+
+csv_para_texto()
